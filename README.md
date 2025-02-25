@@ -8,6 +8,11 @@
     内容为
     NEXT_PUBLIC_BASE_URL_wss=wss://
     NEXT_PUBLIC_BASE_URL=https://
+    store/wallet/connectWallet/useWalletSol 文件下的network需要换成私有节点，否则在查询链上数据的时候会拒绝访问
 
-1. yarn
-2. 
+## 运行
+1. yarn 安装依赖
+2. yarn dev 启动服务
+3. yarn build 打包
+
+    ![alt text](image.png)
