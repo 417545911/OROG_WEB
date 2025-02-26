@@ -1,13 +1,22 @@
 // 导入必要的库和组件
 'use client'
-import { memo, useState } from "react";
-import { useLocale } from "next-intl";
-import { Dropdown, DropdownProps } from "antd";
-import { useThemeStore } from "@/store/theme";
-import useSetChainLocale from "@/hook/useSetChainLocale";
-import useUpdateEffect from "@/hook/useUpdateEffect";
-import dynamic from "next/dynamic";
-const SvgIcon = dynamic(() => import('@/component/SvgIcon')); 
+import {
+    memo,
+    useState,
+} from 'react';
+
+import {
+    Dropdown,
+    DropdownProps,
+} from 'antd';
+import { useLocale } from 'next-intl';
+import dynamic from 'next/dynamic';
+
+import useSetChainLocale from '@/hook/useSetChainLocale';
+import useUpdateEffect from '@/hook/useUpdateEffect';
+import { useThemeStore } from '@/store/theme';
+
+const SvgIcon = dynamic(() => import('@/component/SvgIcon'));
 
 // 定义支持的语言列表
 const localeData = [
@@ -29,15 +38,15 @@ const localeData = [
 const media = [
     {
         text: <SvgIcon className="w-5" value={'gitHub'} />,
-        href: 'https://github.com/simance-ai'
+        href: 'javascript:;'
     },
     {
         text: <SvgIcon className="w-5" value={'x'} />,
-        href: 'https://x.com/orbeog'
+        href: 'javascript:;'
     },
     {
         text: <SvgIcon className="w-5" value={'telegram'} />,
-        href: "https://t.me/orogaibot"
+        href: "javascript:;"
     }
 ];
 

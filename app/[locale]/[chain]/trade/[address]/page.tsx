@@ -1,10 +1,10 @@
 'use client'
 import {
-  memo,
-  useCallback,
-  useEffect,
-  useMemo,
-  useState,
+    memo,
+    useCallback,
+    useEffect,
+    useMemo,
+    useState,
 } from 'react';
 
 import dynamic from 'next/dynamic';
@@ -12,13 +12,13 @@ import { useParams } from 'next/navigation';
 
 import useWebSocket from '@/hook/useWebSocket';
 import {
-  ChainsType,
-  usePathname,
+    ChainsType,
+    usePathname,
 } from '@/i18n/routing';
 import {
-  historicalTickerCandleType,
-  TokenInfoType,
-  transactionType,
+    historicalTickerCandleType,
+    TokenInfoType,
+    transactionType,
 } from '@/interface';
 import { transactionInfoHttp } from '@/request';
 
@@ -26,7 +26,7 @@ const TokenList = dynamic(() => import('../component/TokenList'));
 const TransactionToken = dynamic(() => import('../component/TransactionToken'));
 const Transaction = dynamic(() => import('../component/Transaction'));
 const TransactionInfo = dynamic(() => import('../component/TransactionInfo'));
-const TradingView = dynamic(() => import('@/component/TradingView/TradingView'), { ssr: false });
+// const TradingView = dynamic(() => import('@/component/TradingView/TradingView'), { ssr: false });
 
 const Trade = () => {
     // 获取链信息
@@ -153,7 +153,7 @@ const Trade = () => {
             {/* 交易视图和交易信息 */}
             <div className="flex-grow overflow-y-auto h-full scrollbar-none">
                 <div className="h-[60vh]">
-                    <TradingView getInterval={getInterval} address={address} />
+                    {/* <TradingView getInterval={getInterval} address={address} /> */}
                 </div>
                 <TransactionInfo chain={chain} address={address} marketKline={marketTxActivity} />
             </div>
